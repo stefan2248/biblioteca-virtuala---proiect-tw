@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Biblioteca virtuala</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <header class="app-header">
+    <h1>Biblioteca Virtuala</h1>
+    <p>Gestioneaza colectia ta de carti.</p>
+    <p class="app-count">3 carti, dintre care 1 citita</p>
+ </header>
+</body>
+<main class="container">
+ <section class="panel">
+ <h2>Adaugă carte</h2>
+ <form class="item-form">
+ <label>Titlu <input type="text" name="titlu" placeholder="Ex: Ion" /></label>
+ <label>
+ <select name="format">
+ <option value="fizica">Fizica</option>
+ <option value="digital">Digitala</option>
+ <option value="audiobook">Audiobook</option>
+ </select>
+ </label>
+ <button type="submit">Adaugă</button>
+ </form>
+ </section>
+ <section class="panel">
+ <h2>Cartile mele</h2>
+ <!-- Când lista e goală: <p class="empty">Nu există nicio carte.</p> -->
+ <ul class="item-list">
+ <li class="item-card">
+ <div>
+ <h3>Ion</h3>
+ <span class="badge badge-fizica">Fizica</span>
+ </div>
+ <span class="status">Necitita</span>
+ </li>
+ <li class="item-card done">
+ <div>
+ <h3>Moara cu noroc</h3>
+ <span class="badge badge-digitala">Digitală</span>
+ </div>
+ <span class="status">Citită</span>
+ </li>
+ <li class="item-card">
+ <div>
+ <h3>Enigma Otiliei</h3>
+ <span class="badge badge-audiobook">Audiobook</span>
+ </div>
+ <span class="status">Necitită</span></li>
+ </ul>
+ </section>
+ </main>
+  <footer class="app-footer">Proiect Tehnologii Web</footer>
+</body>
+</html>

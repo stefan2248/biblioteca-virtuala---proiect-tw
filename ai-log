@@ -1,0 +1,28 @@
+# Stage 1: AI log
+## Tools
+- <ChatGPT>
+## Conversations
+- https://chatgpt.com/share/6ac10e94-3504-83eb-98f6-30bfc1b26dd7
+## Key requests
+
+### 1. Styling the header
+- Asked: How can I style the header to have the accent color as background, white centered text, and internal spacing?
+- Got: I learned how to use `background`, `color`, `text-align`, and `padding` to style the header.
+- Changed or rejected: I used `padding: 20px` to get suitable spacing for my interface.
+
+### 2. Using CSS Grid and Flexbox
+- Asked: What is the difference between CSS Grid and Flexbox and how can I use them to organize the page?
+- Got: I learned that Grid can be used for the main two-column layout, while Flexbox can be used to arrange elements inside forms and cards.
+- Changed or rejected: I used Grid for `.container` and Flexbox for the form, labels, and book cards.
+
+### 3. Styling the panels
+- Asked: How can I style the `section` elements to have a background, thin border, rounded corners, and internal spacing?
+- Got: I learned how `background`, `border`, `border-radius`, and `padding` work.
+- Changed or rejected: I used `border-radius: 10px` and `padding: 20px` for the panels.
+
+## What I learned / what did not work
+
+I learned how to use CSS Grid for the main page layout and Flexbox for arranging elements.
+I understood how CSS variables can be defined in `:root` and reused throughout the stylesheet.
+I learned how properties such as `padding`, `gap`, and `border-radius` work, as well as `:hover` and `:focus-visible`.
+At first, some form elements kept the browser's default appearance because they did not have enough CSS styling.
