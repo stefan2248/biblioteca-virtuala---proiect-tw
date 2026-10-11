@@ -1,0 +1,37 @@
+# Stage 2 – AI Usage Log
+
+## AI conversation
+
+https://chatgpt.com/share/6acb9038-0e58-83eb-b13f-7b96aae72c17
+
+## Key requests
+
+### 1. Understanding the laboratory requirements
+- **Asked:** I have this JavaScript laboratory assignment and I need step-by-step explanations.
+- **Got:** A breakdown of Stage 2 into smaller tasks, including creating the JavaScript file, defining book data, implementing functions and testing them.
+- **Changed or rejected:** I adapted the laboratory examples to my Virtual Library project.
+
+### 2. Counting unread books
+- **Asked:** Can we use `t.read` specifically instead of another property name?
+- **Got:** An explanation of how `filter()` works with the `read` property and how `!t.read` selects unread books.
+- **Changed or rejected:** I used the `read` property from my data model and adapted the function to count unread books.
+
+### 3. Understanding includes()
+- **Asked:** How does `includes()` work?
+- **Got:** Examples of how `includes()` checks whether a string contains another string and why `toLowerCase()` is useful for case-insensitive searches.
+- **Changed or rejected:** I applied these methods in the `cautaDupaTitlu()` function.
+
+### 4. Understanding reduce() and ID generation
+- **Asked:** Explain this expression: `return lista.reduce((max, t) => Math.max(max, t.id), 0) + 1;`
+- **Got:** A step-by-step explanation of `reduce()`, `Math.max()`, the initial value `0` and why `1` is added to the maximum ID.
+- **Changed or rejected:** I used this expression in `nextId()` to generate an ID greater than all existing book IDs.
+
+## What I learned / what did not work
+
+I learned how to organize JavaScript code into separate functions and test the results in the browser console.
+
+I understood how `filter()` can count unread books and how `includes()` and `toLowerCase()` can be used to search for books by title.
+
+I also learned how `reduce()` and `Math.max()` work together to generate new IDs, even when some books have been deleted.
+
+I initially needed clarification about using the `read` property instead of the property names from the examples. I adapted the code to match my own data model.
