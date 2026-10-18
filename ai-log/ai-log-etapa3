@@ -1,0 +1,35 @@
+# Stage 3: AI log
+## Tools
+- ChatGPT
+## Conversations
+- https://chatgpt.com/share/6ad4b80f-a4f8-83eb-884a-7f4496168bc4
+Key requests
+## 1. Creating the React project
+- Asked: Help me with step 2 of the laboratory.
+- Got: I learned how to create a React project using Vite and what the frontend folder is used for.
+- Changed or rejected: I created the project inside frontend and kept the previous files in mockup.
+## 2. Removing demo files and reusing CSS
+- Asked: Explain what I need to delete in step 5 and help me with step 6.
+- Got: I learned which Vite demo files can be removed and how to reuse the CSS from Stage 1.
+- Changed or rejected: I copied the previous styles into App.css and changed .container to use one column.
+## 3. Updating main.jsx
+- Asked: Help me with step 7.
+- Got: I learned why main.jsx imports App.css instead of the deleted index.css, and how React renders the App component.
+- Changed or rejected: I updated the CSS import without changing the other necessary imports.
+## 4. Moving the book data and calculating the counter
+- Asked: Help me with steps 8.2 and 8.3.
+- Got: I learned why the carti array is placed above the App function and how filter() and length count unread books.
+- Changed or rejected: I used my book data and calculated the number of unread books with carti.filter((t) => !t.read).length.
+## 5. Adding the header and displaying JSON
+- Asked: Where do I get the header for step 8.4, and how do I complete step 8.5?
+- Got: I learned how to adapt the old HTML header to JSX using className, and how JSON.stringify(carti, null, 2) displays the book data.
+- Changed or rejected: I replaced the fixed counter with calculated values and displayed the books temporarily inside a <pre> element.
+## 6. Checking the project
+- Asked: Help me check the project structure in step 10.
+- Got: I learned how to verify the React project folders and what npm run build is used for.
+- Changed or rejected: I checked the project structure before preparing the GitHub update.
+## What I learned / what did not work
+I learned how to initialize a React project with Vite, install dependencies using npm, and run the development server.
+I understood how main.jsx loads the main component and how JSX differs from HTML, especially when using className and JavaScript expressions inside braces.
+I learned how to reuse CSS from the previous stage, calculate values from an array with filter(), and display data as JSON using JSON.stringify() and <pre>.
+At first, the page could not display the application correctly after removing the demo files because the old CSS import was still present. Updating the import and creating the App component resolved this during development.
