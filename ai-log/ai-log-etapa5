@@ -1,0 +1,8 @@
+# AI Usage Log - Stage 5: Local State and Events
+
+In this stage, I used AI to help me with:
+
+- Understanding how to use `useState` to update the book collection.
+- Fixing the `onToggle` and `onDelete` errors when using the checkbox and delete button.
+- Implementing the light/dark mode switching functionality using React state and CSS.
+- Updating the README documentation for Stage 5.

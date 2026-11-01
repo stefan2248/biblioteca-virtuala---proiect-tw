@@ -19,9 +19,6 @@ Sample data used across all stages:
 2. Moara cu Noroc, read, digital
 3. Enigma Otiliei, unread, audiobook
 
-## How to run
-
-Open `index.html` in a browser. No build step, no server.
 
 ## Stage 2: data logic
 
@@ -49,8 +46,31 @@ npm run dev
 ```
 Then open the address printed in the terminal (http://localhost:5173).
 
+## Stage 4: React components
+
+The application uses reusable React components:
+- `App.jsx` - main application component.
+- `CarteList.jsx` - displays the list of books.
+- `CarteCard.jsx` - displays each book with its title, format and reading status.
+
+The interface is styled using `App.css`.
+
+## Stage 5: State and events
+
+The application uses React `useState` to manage the book collection and the selected theme.
+
+Implemented features:
+- Mark books as read or unread using a checkbox.
+- Delete books from the collection.
+- Automatically update the total number of books and unread books.
+- Switch between light and dark themes.
+
+The book list is updated without reloading the page.
+
 ## Status
 
 - [x] Stage 1: static mockup
 - [x] Stage 2: data logic in JavaScript
 - [x] Stage 3: Vite and React project
+- [x] Stage 4: React components
+- [x] Stage 5: State and events
