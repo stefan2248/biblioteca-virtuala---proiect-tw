@@ -67,6 +67,24 @@ Implemented features:
 
 The book list is updated without reloading the page.
 
+## Stage 6: data from a mock API
+
+The book list is served by json-server from `db.json`. The app fetches the books on load using `useEffect` and displays a loading message or an error message when necessary.
+
+### How to run
+
+Run the following commands in two separate terminals, inside the `frontend` folder:
+
+```bash
+npm run api
+```
+
+```bash
+npm run dev
+```
+
+The API runs at `http://localhost:3001/carti` and the React application at `http://localhost:5173`.
+
 ## Status
 
 - [x] Stage 1: static mockup
@@ -74,3 +92,6 @@ The book list is updated without reloading the page.
 - [x] Stage 3: Vite and React project
 - [x] Stage 4: React components
 - [x] Stage 5: State and events
+- [x] Stage 5: local state and events
+- [x] Stage 6: data from a mock API
+- [ ] Stage 7: form and validation

@@ -1,12 +1,7 @@
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CarteList from "./components/CarteList.jsx";
-
-const CARTI_INITIALE = [
-  { id: 1, title: "Ion", read: false, format: "fizica" },
-  { id: 2, title: "Moara cu Noroc", read: true, format: "digital" },
-  { id: 3, title: "Enigma Otiliei", read: false, format: "audiobook" }
-];
+import { fetchCarti } from "./api.js";
 
 function temaInitiala() {
   if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
@@ -17,22 +12,53 @@ function temaInitiala() {
 }
 
 export default function App() {
-  const [carti, setCarti] = useState(CARTI_INITIALE);
-
+  const [carti, setCarti] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [tema, setTema] = useState(temaInitiala);
 
+  useEffect(() => {
+    let ignore = false;
+
+    async function load() {
+      try {
+        const data = await fetchCarti();
+
+        console.log("Carti primite de la API:", data);
+
+        if (!ignore) {
+          setCarti(data);
+        }
+      } catch (err) {
+        if (!ignore) {
+          setError(err.message);
+        }
+      } finally {
+        if (!ignore) {
+          setLoading(false);
+        }
+      }
+    }
+
+    load();
+
+    return () => {
+      ignore = true;
+    };
+  }, []);
+
   function handleTema() {
-  let noua;
+    let noua;
 
-  if (tema === "dark") {
-    noua = "light";
-  } else {
-    noua = "dark";
+    if (tema === "dark") {
+      noua = "light";
+    } else {
+      noua = "dark";
+    }
+
+    setTema(noua);
+    document.documentElement.dataset.theme = noua;
   }
-
-  setTema(noua);
-  document.documentElement.dataset.theme = noua;
-}
 
   function handleToggleCitita(id) {
     setCarti((prev) =>
@@ -56,22 +82,38 @@ export default function App() {
       <header className="app-header">
         <h1>Biblioteca Virtuala</h1>
         <p>Gestioneaza colectia ta de carti.</p>
+
         <p className="app-count">
           {carti.length} carti, dintre care {necitite} necitite
         </p>
-          <button type="button" onClick={handleTema}>
-            Schimba tema
-          </button>
+
+        <button type="button" onClick={handleTema}>
+          Schimba tema
+        </button>
       </header>
 
       <main className="container">
         <section className="panel">
           <h2>Cartile mele</h2>
-          <CarteList
-            carti={carti}
-            onToggle={handleToggleCitita}
-            onDelete={handleDelete}
-          />
+
+          {loading && (
+            <p className="info">Se incarca biblioteca...</p>
+          )}
+
+          {error && (
+            <p className="error">
+              Nu am putut incarca datele: {error}.
+              Ruleaza <code>npm run api</code>?
+            </p>
+          )}
+
+          {!loading && !error && (
+            <CarteList
+              carti={carti}
+              onToggle={handleToggleCitita}
+              onDelete={handleDelete}
+            />
+          )}
         </section>
       </main>
     </>

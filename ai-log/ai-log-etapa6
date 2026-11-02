@@ -1,0 +1,18 @@
+# Stage 6: AI log
+
+## Tools
+- ChatGPT
+
+## Key requests
+
+### 1. Setting up json-server
+- Asked: How can I install and configure json-server for my React project?
+- Got: Instructions for installing json-server and creating db.json with five books.
+
+### 2. Fetching data from the API
+- Asked: How can I use fetch and useEffect to load books from the API?
+- Got: Help creating api.js and updating App.jsx to fetch books from the server.
+
+### 3. Loading and error states
+- Asked: How can I display loading and error messages?
+- Got: Help adding loading and error states and testing them with the API running and stopped.

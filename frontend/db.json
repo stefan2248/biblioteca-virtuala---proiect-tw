@@ -1,0 +1,36 @@
+
+{
+  "carti": [
+    {
+      "id": 1,
+      "title": "Ion",
+      "read": false,
+      "format": "fizica"
+    },
+    {
+      "id": 2,
+      "title": "Moara cu Noroc",
+      "read": true,
+      "format": "digital"
+    },
+    {
+      "id": 3,
+      "title": "Enigma Otiliei",
+      "read": false,
+      "format": "audiobook"
+    },
+    {
+      "id": 4,
+      "title": "Baltagul",
+      "read": false,
+      "format": "fizica"
+    },
+    {
+      "id": 5,
+      "title": "Morometii",
+      "read": true,
+      "format": "digital"
+    }
+  ]
+}
+    

@@ -17,6 +17,9 @@
     --fizica: #2563eb;
     --digitala: #16a34a;
     --audiobook: #ea580c;
+
+    --error-bg: #fdf2f8;
+    --error-border: #fbcfe8;
 }
 
 body {
@@ -138,18 +141,19 @@ button:hover {
 }
 
 @media (prefers-color-scheme: dark) {
-:root:not([data-theme="light"]) {
+    :root:not([data-theme="light"]) {
         --bg: #14121d;
         --card: #1e1b2e;
         --text: #e5e7eb;
         --muted: #9ca3af;
         --border: #352f4d;
         --accent-soft: #2a2342;
+        --error-bg: #3b1d2e;
+        --error-border: #6b2a4a;
     }
 }
 
 /* Etapa 5: checkbox si buton de stergere */
-
 .item-main {
     display: flex;
     flex-direction: row;
@@ -192,10 +196,25 @@ button:hover {
 }
 
 :root[data-theme="dark"] {
-  --bg: #14121d;
-  --card: #1e1b2e;
-  --text: #e5e7eb;
-  --muted: #9ca3af;
-  --border: #352f4d;
-  --accent-soft: #2a2342;
+    --bg: #14121d;
+    --card: #1e1b2e;
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+    --border: #352f4d;
+    --accent-soft: #2a2342;
+    --error-bg: #3b1d2e;
+    --error-border: #6b2a4a;
+}
+
+/* Etapa 6: stari de incarcare si eroare */
+.info {
+    color: var(--muted);
+}
+
+.error {
+    color: var(--text);
+    background: var(--error-bg);
+    border: 1px solid var(--error-border);
+    border-radius: 8px;
+    padding: 10px 12px;
 }
